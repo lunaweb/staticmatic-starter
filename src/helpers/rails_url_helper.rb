@@ -74,7 +74,7 @@ module RailsUrlHelper
     url = if options == :back
       'javascript:history.back()'
     elsif options.kind_of?(String) and respond_to?(:page_find) and path = page_find(options)
-      path
+      path["url"]
     elsif options.kind_of?(String)
       options
     else
