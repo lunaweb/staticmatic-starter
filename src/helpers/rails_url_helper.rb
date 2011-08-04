@@ -6,7 +6,7 @@ module RailsUrlHelper
   BOOLEAN_ATTRIBUTES = %w(disabled readonly multiple checked autobuffer
                        autoplay controls loop selected hidden scoped async
                        defer reversed ismap seemless muted required
-                       autofocus novalidate formnovalidate open).to_set
+                       autofocus novalidate formnovalidate open).to_set unless defined?(BOOLEAN_ATTRIBUTES)
   BOOLEAN_ATTRIBUTES.merge(BOOLEAN_ATTRIBUTES.map {|attr| attr.to_sym })
 
   def link_to(*args, &block)

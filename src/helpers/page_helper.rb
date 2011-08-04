@@ -35,7 +35,7 @@ module PageHelper
 
         nav << <<-NAV.gsub(/^[\s]{8}/, '')
         #{prefix}  <li#{depth == 0 ? %( id="n#{i + 1}") : ''}#{has_active ? %( class="active") : ''}>
-        #{prefix}    <a href="#{page['url']}">#{page['title']}</a>#{nav_children.blank? ? '' : "\n#{nav_children.gsub(/^[\s]/, "#{prefix}     ")}"}
+        #{prefix}    <a href="#{page['url']}">#{page['title']}</a>#{nav_children.nil? ? '' : "\n#{nav_children.gsub(/^[\s]/, "#{prefix}     ")}"}
         #{prefix}  </li>
         NAV
       end

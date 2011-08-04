@@ -14,8 +14,9 @@ module RailsAssetTagHelper
     javascripts(sources)
   end
 
-  def stylesheet_link_tag(*sources)
-    stylesheets(sources)
-  end
+  # def stylesheet_link_tag(sources)
+  #   stylesheets(sources)
+  #   puts stylesheets(sources)
+  # end
 
 end

@@ -6,14 +6,14 @@ body {
   background: #fff;
 }
 .wrapper {
-  background: #BAC1D3 url('../images/background.png') center top repeat-y;
+  background: #BAC1D3 image-url('background.png') center top repeat-y;
 }
 
 // ===========
 // = =Header =
 // ===========
 .header-wrapper {
-  background: url('../images/header.png') center top no-repeat;
+  background: image-url('header.png') center top no-repeat;
   position: relative;
   z-index: 2;
 }
@@ -75,7 +75,7 @@ $navheight: 61px;
     padding-top: $navheight;
     height: 0;
     overflow: hidden;
-    background: url('../images/navigation.png') 0 0 no-repeat;
+    background: image-url('navigation.png') 0 0 no-repeat;
   }
 }
   $n1: 45px;
@@ -118,12 +118,12 @@ $navheight: 61px;
 // = =Footer =
 // ===========
 .footer {
-  background: url('../images/footer.png') center top repeat-x;
+  background: image-url('footer.png') center top repeat-x;
   @include min-height(70px);
   clear: both;
   position: relative;
   a {
-    @include text-shadow(rgb(255,255,255), 0, 1px, 0);
+    @include text-shadow(rgb(255,255,255) 0 1px 0);
     text-decoration: none;
     color: #333;
     &:hover {

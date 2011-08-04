@@ -1,8 +1,10 @@
 !!! 5
-/[if IE 7 ]    <html lang="fr" class="no-js ie7 oldie" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
-/[if IE 8 ]    <html lang="fr" class="no-js ie8 oldie" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
-/[if IE 9 ]    <html lang="fr" class="no-js ie9" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+:plain
+  <!--[if lt IE 7]> <html lang="fr" class="no-js ie6"> <![endif]--> 
+  <!--[if IE 7]>    <html lang="fr" class="no-js ie7"> <![endif]--> 
+  <!--[if IE 8]>    <html lang="fr" class="no-js ie8"> <![endif]--> 
+  <!--[if IE 9]>    <html lang="fr" class="no-js ie8"> <![endif]--> 
+  <!--[if gt IE 9]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
   
 %head
   = render :partial => "head"
@@ -24,7 +26,6 @@
           %li= link_to "Presse", "/presse"
         
         %a#logo{:href => "/", :title => "Revenir à la page d’accueil"}
-          -# = image_tag "logo.png", :width => "200", :height => "100", :alt => ""
           = image_tag "logo.png", :size => "200x100", :alt => ""
     
     .content-wrapper

@@ -100,15 +100,15 @@ sub {
 b, strong { font-weight: bold;}
 em, i { font-style: italic;}
 
-/* ========= */
-/* = Links = */
-/* ========= */
+// ========= */
+// = Links = */
+// ========= */
 a {
   color: $clink;
 }
-/* =================================================== */
-/* = Paragraphs, Definition Lists, (Un)Ordered Lists = */
-/* =================================================== */
+// =================================================== */
+// = Paragraphs, Definition Lists, (Un)Ordered Lists = */
+// =================================================== */
 p, ul, ol, blockquote, pre {
   margin-bottom: 1.5em;
 }

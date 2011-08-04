@@ -3,7 +3,7 @@
 # https://lunaweb.codebasehq.com/luna/luna-rails-app-templates/blob/master/files/app/helpers/application_helper.rb
 module LunaApplicationHelper
 
-  TITLE_SEPARATOR = '-'
+  TITLE_SEPARATOR = '-' unless defined?(TITLE_SEPARATOR)
 
   # Help individual pages to set their HTML titles
   def meta_title_full
