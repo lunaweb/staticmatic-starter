@@ -96,7 +96,7 @@ module RailsUrlHelper
             attrs << %(#{key}="#{final_value}")
           end
         end
-        " #{attrs.sort * ' '}".html_safe unless attrs.empty?
+        " #{attrs.sort * ' '}" unless attrs.empty?
       end
     end
 
