@@ -7,8 +7,8 @@ div.border {
 div.colborder {
   @include colborder;
 }
-@import "layout";
 @import "typo";
+@import "layout";
 @import "forms";
 @import "global";
 @import "pages";
