@@ -1,4 +1,3 @@
-
 # Application helper
 # https://lunaweb.codebasehq.com/luna/luna-rails-app-templates/blob/master/files/app/helpers/application_helper.rb
 module LunaApplicationHelper
@@ -10,7 +9,7 @@ module LunaApplicationHelper
     "#{meta_title} #{TITLE_SEPARATOR} #{@site_name}".
       gsub(Regexp.new( "^([\s#{TITLE_SEPARATOR}]+)"), '').
       gsub(Regexp.new( "([\s#{TITLE_SEPARATOR}]+)$"), '') if instance_variable_defined? :@site_name
-    meta_title unless instance_variable_defined? :@site_name
+    meta_title.to_s unless instance_variable_defined? :@site_name
   end
 
   # Help individual pages to set their HTML titles
