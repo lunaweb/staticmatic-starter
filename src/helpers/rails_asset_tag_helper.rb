@@ -13,7 +13,8 @@ module RailsAssetTagHelper
   def javascript_include_tag(*sources)
     javascripts(sources)
   end
-
+  
+  # FIXME: make the stylesheet_link_tag helper work
   # def stylesheet_link_tag(sources)
   #   stylesheets(sources)
   #   puts stylesheets(sources)

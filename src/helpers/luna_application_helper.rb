@@ -1,5 +1,7 @@
 # Application helper
+# Hosted on a private repo:
 # https://lunaweb.codebasehq.com/luna/luna-rails-app-templates/blob/master/files/app/helpers/application_helper.rb
+
 module LunaApplicationHelper
 
   TITLE_SEPARATOR = '-' unless defined?(TITLE_SEPARATOR)
