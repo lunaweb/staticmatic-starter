@@ -21,7 +21,7 @@ $emblem-position: 0% !default;
 $emblem-spacing: 0 !default;
 $emblem-repeat: no-repeat !default;
 
-$emblem-sprites: sprite-map("emblem/*.png",
+$emblem-sprites: sprite-map("front/emblem/*.png",
   $position: $emblem-position,
   $spacing: $emblem-spacing,
   $repeat: $emblem-repeat,
@@ -62,6 +62,7 @@ $emblem-sprites: sprite-map("emblem/*.png",
 
 
 
+@import "typo";
 @import "layout";
 @import "forms";
 @import "global";

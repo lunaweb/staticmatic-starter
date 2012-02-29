@@ -10,38 +10,41 @@
   = render :partial => "head"
 %body{:id => @body_id, :class => body_class}
   .wrapper
+    
     .header-wrapper
-      #header.header
-        #skip-to-nav
-          %ul.nobullets.small
-            %li= link_to "Aller au plan du site", "/sitemap#content"
-            %li= link_to "Aller au contenu", "#content"
-            %li= link_to "Aller à la recherche", "#footer-search"
-            %li= link_to "Aller à la navigation principale", "#navigation"
+      .container
+        #header.header
+          #skip-to-nav
+            %ul.nobullets.small
+              %li= link_to "Aller au plan du site", "/sitemap#content"
+              %li= link_to "Aller au contenu", "#content"
+              %li= link_to "Aller à la recherche", "#footer-search"
+              %li= link_to "Aller à la navigation principale", "#navigation"
             
-        = navigation
+          = navigation
 
-        %ul#header-tools.list-inline.small.list-separators
-          %li= link_to "Qui sommes-nous", "/aboutus"
-          %li= link_to "Presse", "/presse"
+          %ul#header-tools.list-inline.small.list-separators
+            %li= link_to "Qui sommes-nous", "/aboutus"
+            %li= link_to "Presse", "/presse"
         
-        %a#logo{:href => "/", :title => "Revenir à la page d’accueil"}
-          = image_tag "logo.png", :size => "200x100", :alt => ""
+          %a#logo{:href => "/", :title => "Revenir à la page d’accueil"}
+            = image_tag "logo.png", :size => "114x114", :alt => ""
     
     .content-wrapper
-        
-      #content
-        = yield
-        .clear
+      .container
+        #content
+          = yield
+          .clear
   .footer.small
-    #footer-navigation
-      = sitemap
-      %ul.list-inline.left.list-separators{:role => "contentinfo"}
-        %li< 
-          %b © #{ Date.today.year }
-        %li= link_to "Crédits", "/credits"
-        %li= link_to "Plan du site", "/sitemap"
-        %li= link_to "Nous contacter", "/contact"
+    .container
+      #footer-navigation
+        = sitemap
+        %ul.list-inline.left.list-separators{:role => "contentinfo"}
+          %li< 
+            %b © #{ Date.today.year }
+          %li= link_to "Crédits", "/credits"
+          %li= link_to "Plan du site", "/sitemap"
+          %li= link_to "Nous contacter", "/contact"
           
   / Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
   %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
