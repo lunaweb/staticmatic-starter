@@ -10,4 +10,6 @@ line_comments     = ARGV[0] == 'build' ? false : true
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
 
+Sass::Script::Number.precision = 8
+
 project_type = :staticmatic
